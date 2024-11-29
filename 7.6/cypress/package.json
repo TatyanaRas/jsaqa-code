@@ -1,0 +1,20 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" , 
+
+    "tablet:headded": "cypress run -- browser chrome -b --headed cypress.config.js -C ",
+    "tablet:headless": "cypress run -- browser chrome -b --headless cypress.config.js -C",
+    "phone:headded": "cypress run -- browser chromium -b --headed cypress2.config.js -C",
+    "phone:headless": "cypress run --browser chromium -b --headless cypress2.config.js -C"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+  "cypress": "^13.16.0"
+  }
+}
