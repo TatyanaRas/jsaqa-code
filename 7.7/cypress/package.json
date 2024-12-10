@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "cy:booking": "cypress run  --spec 'cypress/e2e/booking.cy.js' --record --key 22b988c5-01d5-4a2f-b85a-c655a70d5e3a",
+    "cy:display": "cypress run  --spec 'cypress/e2e/display-page.cy.js' --record --key 22b988c5-01d5-4a2f-b85a-c655a70d5e3a",
+    "cy:login": "cypress run  --spec 'cypress/e2e/login-admin.cy.js' --record --key 22b988c5-01d5-4a2f-b85a-c655a70d5e3a",
+    "cy:parallel": "npm run cy:booking -- --browser chrome --group Booking --ci-build-id 5 & npm run cy:display -- --browser chrome --group Display --ci-build-id 5 & npm run cy:login -- --browser chrome --group Login --ci-build-id 5"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rasskasova",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cypress": "^13.16.0"
+    "cypress": "^13.16.1"
   }
 }
